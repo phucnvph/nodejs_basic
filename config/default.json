@@ -3,6 +3,7 @@
         "host": "localhost",
         "user": "root",
         "password": "",
-        "database": "qlbh"
+        "database": "qlbh",
+        "connectionLimit": 50
     }
 }
