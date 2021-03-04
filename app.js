@@ -1,17 +1,23 @@
-const db = require('./utils/db');
+const db = require("./utils/db");
 
-db.load('SELECT * FROM products', function (rows) {
-    console.log(rows);
+//Sử dụng Promise
+// const promise = db.load("SELECT * FROM categories");
+// promise
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   })
+//   .finally(() => {
+//     console.log("done");
+//   });
 
-}, function (error) {
-    console.log(error.sqlMessage);
-});
 
 
-db.load('SELECT * FROM categories', function (rows) {
-    for (const category of rows) {
-        console.log(`${category.name} => mota: ${category.description}`);
-    }
-}, function (error) {
-    console.log(error.sqlMessage);
-});
+//Sử dụng async await
+const main = async () => {
+  const rows = await db.load("SELECT * FROM categories");
+  console.log(rows);
+}
+main();
