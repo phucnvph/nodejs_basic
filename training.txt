@@ -1,0 +1,7 @@
+Bai 02:
+        - khởi tạo dự án: npm init
+        - khởi tạo git: git init
+        - học về module
+
+Bai 03: 
+        - mysql npm 
